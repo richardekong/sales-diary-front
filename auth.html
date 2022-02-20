@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sales Diary</title>
+        <link rel="stylesheet" href="css/auth.css"/>
+    </head>
+    <body>
+        <header class="header">
+            <script src="script/header.js"></script>
+        </header>
+        <div class="main-content">
+            <div class="auth-content">
+                <!-- nav tabs -->
+                <input id="sign-up-tab" type="radio" name="tabs" checked/>
+                <label for="sign-up-tab">Sign up</label>
+                <input id="sign-in-tab" type="radio" name="tabs" checked/>
+                <label for="sign-in-tab">Sign in</label>
+
+                <!-- authentication tab contents -->
+                <div class="tab sign-up-content">
+                    <form>
+                        <label for="email-sign-up">Enter Email Address</label><br>
+                        <input id="email-sign-up" name="email" type="text" placeholder="Email Address"/>
+                        <br>
+                        <br>
+                        <label for="phone">Enter Phone Number</label><br>
+                        <input id="phone" name="phone" type="text" placeholder="Phone Number"/>
+                        <br>
+                        <br>
+                        <label for="password">Enter Password</label><br>
+                        <input id="password" name="password" type="password" placeholder="Password"/>
+                        <br>
+                        <br>
+                        <button type="button">Sign up</button>
+                        <br>
+                        <p>Alternatively, sign up with:</p>
+                        <div class="auth-icon-holder">
+                            <a href=""><img src="icons/google.png" title="google" alt="google"/></a>
+                            <a href=""><img src="icons/facebook.png" title="facebook" alt="facebook"/></a>
+                            <a href=""><img src="icons/linkedin.png" title="linkedin" alt="linkedin"/></a>
+                        </div>
+                    </form>    
+                </div>
+                <div class="tab sign-in-content">
+                    <form>
+                        <label for="email-sign-in">Enter Email Address</label><br>
+                        <input id="email-sign-in" name="email" type="text" placeholder="Email Address"/>
+                        <br>
+                        <br>
+                        <label for="pwd-sign-in">Enter Password</label><br>
+                        <input id="pwd-sign-in" type="password" placeholder="Password"/>
+                        <br>
+                        <br>
+                        <button type="button">Sign in</button>
+                        <br>
+                        <p>Alternatively, sign in with:</p>
+                        <div class="auth-icon-holder">
+                            <a href=""><img src="icons/google.png" title="google" alt="google"/></a>
+                            <a href=""><img src="icons/facebook.png" title="facebook" alt="facebook"/></a>
+                            <a href=""><img src="icons/linkedin.png" title="linkedin" alt="linkedin"/></a>
+                        </div>
+                        <p><a href="">Forgot your password?</a></p>
+                    </form>  
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <script src="script/footer.js"></script>
+        </footer>
+    </body>
+</html>

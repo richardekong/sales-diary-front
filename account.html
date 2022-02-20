@@ -1,0 +1,135 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Sales Diary</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/account.css"/>
+    </head>
+    <body>
+        <header class="header">
+            <script src="script/header.js"></script>
+        </header>
+        <div class="content">
+            <nav class="left-pane">
+                <script src="script/nav.js"></script>
+            </nav>
+            <div class="main-section">
+                <div id="avatar-holder">
+                    <img src="icons/avatar.svg" id="avatar" alt="avatar"/>
+                    <button class="update" type="button">
+                        <img src="icons/update.png" alt="update"/>
+                        <span>Change</span>
+                    </button>
+                </div>
+                <table>
+                    <tr>
+                        <td class="section-header" colspan="3">Personal Details</td>
+                    </tr>
+                    <tr>
+                        <td class="key">Trader Id:</td>
+                        <td colspan="2">2839388349900834</td>
+                    </tr>
+                    <tr>
+                        <td class="key">Name:</td>
+                        <td>Richard Dev</td>
+                        <td>
+                            <button class="update" type="button">
+                                <img src="icons/update.png" alt="update"/>
+                                <span>Update</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">Email:</td>
+                        <td>kongmai@gmail.com</td>
+                        <td>
+                            <button class="update" type="button">
+                                <img src="icons/update.png" alt="update"/>
+                                <span>Update</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">Phone:</td>
+                        <td>+2348097347355</td>
+                        <td>
+                            <button class="update" type="button">
+                                <img src="icons/update.png" alt="update"/>
+                                <span>Update</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">Address:</td>
+                        <td>Kingstone Avenue</td>
+                        <td>
+                            <button class="update" type="button">
+                                <img src="icons/update.png" alt="update"/>
+                                <span>Update</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="section-header" colspan="3">
+                            <span>Two Factor Authentication (2FA) Details</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key"><label for="2fa-state">2FA state:</label></td>
+                        <td>
+                            <select id="2fa-state" name="2FA-state">
+                                <option value="Enabled">Enabled</option>
+                                <option value="Disabled">Disabled</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button class="update" type="button">
+                                <img src="icons/update.png" alt="update"/>
+                                <span>Update</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key"><label for="2fa-exp">2FA Expiry Duration:</label></td>
+                        <td>
+                            <select id="2fa-exp" name="2FA-expiry">
+                                <option value="1">1 minutes</option> 
+                                <option value="2">2 minutes</option>
+                                <option value="3">3 minutes</option>
+                                <option value="4">4 minutes</option> 
+                                <option value="5">5 minutes</option>  
+                            </select>
+                        </td>
+                        <td>
+                            <button class="update" type="button">
+                                <img src="icons/update.png" alt="update"/>
+                                <span>Update</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key"><label for="2fa-ch">2FA Channel:</label></td>
+                        <td>
+                            <select id="2fa-ch" name="2FA-channel">
+                                <option value="Email">Email</option>
+                                <option value="SMS">SMS</option>
+                                <option value="Voice">Voice</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button class="update" type="button">
+                                <img src="icons/update.png" alt="update"/>
+                                <span>Update</span>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right-pane"></div>
+        </div>
+        <footer class="footer">
+            <script src="script/footer.js"></script>
+        </footer>
+    </body>
+</html>
+

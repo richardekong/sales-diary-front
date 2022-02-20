@@ -1,0 +1,27 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+
+ <title/>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" stroke="#b507ac" fill="none" id="svg_1" d="m57,53l0,-38a4,4 0 0 0 -4,-4l-42,0a4,4 0 0 0 -4,4l0,38l50,0z" class="cls-1"/>
+  <line stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" stroke="#b507ac" fill="none" id="svg_2" y2="49" y1="49" x2="57" x1="7" class="cls-1"/>
+  <path stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" stroke="#b507ac" fill="none" id="svg_3" d="m14,11a5,5 0 1 1 5,5" class="cls-1"/>
+  <path stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" stroke="#b507ac" fill="none" id="svg_4" d="m40,11a5,5 0 1 1 5,5" class="cls-1"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_5" r="2" cy="25.5" cx="32" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_6" r="2" cy="25.5" cx="40" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_7" r="2" cy="25.5" cx="48" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_8" r="2" cy="33.5" cx="32" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_9" r="2" cy="33.5" cx="40" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_10" r="2" cy="33.5" cx="48" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_11" r="2" cy="33.5" cx="16" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_12" r="2" cy="33.5" cx="24" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_13" r="2" cy="41.5" cx="32" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_14" r="2" cy="41.5" cx="40" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_15" r="2" cy="41.5" cx="16" class="cls-2"/>
+  <circle stroke="#b507ac" fill="#b507ac" id="svg_16" r="2" cy="41.5" cx="24" class="cls-2"/>
+ </g>
+</svg>

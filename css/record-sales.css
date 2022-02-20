@@ -1,0 +1,88 @@
+
+
+.main-section{
+    width: auto;
+    height: 100vh;
+    border:2px solid black;
+    display:flex;
+    flex-direction:column;
+    overflow: auto;
+}
+
+.main-section > div{
+    width: auto;
+    height: fit-content;
+    background: rgb(204, 175,204);
+    box-shadow: 2px 4px #666;
+    transition: all 0.5s 0.5s ease;
+    margin:10px;
+    padding: 10px;
+}
+
+.main-section > div:hover{
+    box-shadow: 1px 2px #666;
+    transform: scale(0.999)
+}
+
+#top-section{
+    display: flex;
+    justify-content: center;
+}
+
+form input[type="text"], form input[type="number"], select{
+    border:1px solid purple;
+    width: 75%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.datalist-box {
+    width: 75%;
+}
+
+.item-container{
+    width: 75%;
+    padding: 10px;
+    display:block;
+}
+
+.item-container li{
+    padding:10px;
+}
+
+.item-container li:hover{
+    background-color: #4545fd;
+    color:#ffffff;
+}
+
+input:focus, input:visited{
+    outline: 0 solid purple;
+    box-shadow: 0 0 0 1px purple;
+}
+
+.btn, #btn-back{
+    background: purple;
+    border-radius: 10px;
+    color:#fff;
+    padding: 5px;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.signature-canvass{
+    border:1px solid purple;
+    background: #fff;
+    border-radius: 10px;
+    width: 75%;
+}
+
+#customer-forms{
+    display: none;
+}
+
+#old-customer-form-section{
+    display:none;
+}
+

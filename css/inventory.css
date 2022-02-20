@@ -1,0 +1,81 @@
+
+
+.main-section{
+    width:100%;
+    height:95vh;
+    display: flex;
+    flex-direction:column;
+    margin:10px 0 10px 0;
+    overflow: auto;
+}
+
+.product-image-holder{
+    background-color: rgb(204, 175, 204);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding:20px;
+    margin:10px;
+    box-shadow:2px 4px #888;
+}
+
+.product-image-holder img{
+    width: fit-content;
+    height:fit-content;
+}
+
+.image-upload-section{
+    background-color: rgb(204, 175, 204);
+    border-radius: 10px;
+    display: flex;
+    height: fit-content;
+    flex-direction:row;
+    justify-content: flex-start;
+    padding: 10px;
+    margin: 10px;
+    box-shadow:2px 4px #888;
+}
+
+.image-button{
+    width: 100%;
+    background-color: purple;
+    border:1px solid purple;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    margin:5px;
+}
+
+.inv-form-holder{
+    background-color: rgb(204, 175, 204);
+    border-radius: 10px;
+    padding: 20px;
+    margin:10px;
+    box-shadow:2px 4px #888;
+}
+
+.inv-form-holder form input{
+    border:1px solid purple;
+    border-radius: 5px;
+    padding:10px;
+    width:95%;
+}   
+
+ p{
+    font-weight: bold;
+}
+
+input:focus, input:visited,
+ textarea:focus, textarea:visited, 
+ .image-button{
+    outline: 0 solid purple;
+    box-shadow: 0 0 0 1px purple;
+}
+
+textarea{
+    border: 1px solid purple;
+    border-radius: 5px;
+    width: 97%;
+    resize: none;
+}
+

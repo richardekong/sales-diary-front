@@ -1,0 +1,143 @@
+
+/* header style rules */
+.header{
+    background-color:purple;
+    color:white;
+    width:100vw;
+    height:fit-content;
+    text-align: center;
+    line-height: 5vh;
+    border:1px solid black;
+    overflow: auto;
+}
+
+.main-content{
+
+    border:1px solid black;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+
+/* hide radio button */
+input[type="radio"] {
+    display: none;
+}
+
+/* show tab label */
+input[type="radio"] + label{
+    display: inline-block;
+}
+
+/* hide tab content */
+input[type="radio"] ~ .tab{
+    display: none;
+}
+
+/* show the content of selected tab */
+#sign-up-tab:checked ~ .tab.sign-up-content,
+#sign-in-tab:checked ~ .tab.sign-in-content{
+    display: block;
+}
+
+input[type="radio"]:checked + label{
+    background:purple;
+    color:#fff;
+    border-bottom:1px solid transparent;
+}
+
+/* style look and feel of tabs */
+input[type="radio"] + label{
+    border:1px solid purple;
+    background:#fff;
+    color: purple;
+    padding:4px 12px;
+    border-radius:4px 4px 0 0;
+    position:relative;
+    top:1px;
+}
+
+input[type="radio"] ~ .tab{
+    width:120%;
+    border:1px solid black;
+    border-top: 1px solid #999;
+    border-radius:0 4px 4px 4px;
+    padding:12px;
+    box-shadow: 2px 4px #888;
+}
+
+input[type="radio"] ~ .tab:hover{
+    box-shadow: 0 0 #888;
+}
+
+form{
+    margin: 10px;
+    padding: 0 30px;
+}
+
+form p, form label{
+    color: purple;
+    font-weight: bold;
+}
+
+form input{
+    border:1px solid purple;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+form input:focus, form input:visited{
+    outline: 0 solid purple;
+    box-shadow: 0 0 0 1px purple;
+}
+
+form button{
+    background-color: purple;
+    border-radius: 8px;
+    color: #fff;
+    padding: 5px;
+    transition: 0.4s;
+}
+
+form button:hover{
+    border-color:#fff;
+    background-color: #fff;
+    color: purple;
+}
+
+form button:focus, form button:visited{
+    outline: 0 solid purple;
+    box-shadow: 0 0 0 1px purple;
+}
+
+form a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-icon-holder{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    justify-content: space-between;
+}
+
+.auth-icon-holder img{
+    border-radius: 50%;
+    box-shadow: 1px 2px #888;
+}
+
+.footer{
+    background-color:purple;
+    color:white;
+    width:100vw;
+    height:30vh;
+    border:1px solid black;
+    overflow: auto;
+}

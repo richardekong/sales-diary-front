@@ -1,0 +1,138 @@
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.header{
+    background-color:purple;
+    color:white;
+    width:100vw;
+    height:fit-content;
+    text-align: center;
+    line-height: 5vh;
+    overflow: auto;
+}
+
+.content{
+    width:100vw;
+    height:100vh;
+    background-color:transparent;
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.left-pane{
+    background-color:purple;
+    color:white;
+    grid-column:1/1;
+    grid-row:1/ span 3;
+    overflow:hidden;
+}
+
+.menu-item{
+    border-bottom:1px solid white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+a{
+    color:#fff;	
+    text-decoration:none;
+}
+
+.menu-item:hover{
+    border: 5px solid rgb(204, 175, 204);
+}
+
+.form-holder{
+    border:1px solid black;
+    grid-column:2/2;
+    grid-row:1/ span 3;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    width:60vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+.access-form{
+    border:1px solid purple;
+    border-radius:10px;
+    grid-column: 2/2;
+    grid-row: 2/2;
+    padding:10%;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    box-shadow:4px 8px #888;
+    width:25vw;
+    height: fit-content;
+    overflow:hidden;
+
+}
+
+.access-form input{
+    border:1px solid purple;
+    border-radius: 5px;
+    padding: 5px;
+    width:20vw;
+}
+
+.access-form input:focus, .access-form input:visited{
+    outline:0 solid purple;
+    box-shadow: 0 0 0 1px purple;
+    
+}
+
+.access-form button:hover{
+    background-color: white;
+    color:purple;
+    border-color: white;
+}
+
+.access-form a{
+    color:purple;
+    text-decoration: none;
+}
+
+.access-form button{
+    background-color: purple;
+    color:white;
+    border-radius:5px;
+    padding: 5px;
+    width: 10vw;
+}
+
+.form-holder p{
+    color:purple;
+    grid-column: 2/2;
+    grid-row: 3/3;
+}
+
+.right-pane{
+    background-color: purple;
+    grid-column:3/3;
+    grid-row:1/span 3;
+    overflow: auto;
+}
+
+.footer{
+    background-color:purple;
+    color:white;
+    width:100vw;
+    height:30vh;
+    overflow: auto;
+}
+
+.card{
+    box-shadow: 1px 2px #666;
+}
+
+.card:hover{
+    box-shadow: 0 0;
+}
+

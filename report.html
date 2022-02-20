@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Diary</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/report.css"/>
+</head>
+<body>
+<header class="header">
+    <script src="script/header.js"></script>
+</header>
+<div class="content">
+    <nav class="left-pane">
+        <script src="script/nav.js"></script>
+    </nav>
+    <div class="main-content">
+        <div class="top-section card">
+            <span class="section-header">Custom Sales Report</span>
+            <form id="customer-report-generator">
+                <div>
+                    <label for="from-date">From:</label><br>
+                    <input id="from-date" type="date">
+                </div>
+                <div>
+                    <label for="to-date">To:</label><br>
+                    <input id="to-date" type="date">
+                </div>
+                <div>
+                    <br>
+                    <button id="custom-date-btn">Go</button>
+                </div>
+            </form>
+        </div>
+        <div class="mid-section card">
+            <div class="periodic-report-generator">
+                <span class="section-header">Daily Sales Report</span>
+            </div>
+            <div class="periodic-report-generator">
+                <span class="section-header">Weekly Sales Report</span>
+            </div>
+            <div class="periodic-report-generator">
+                <span class="section-header">Monthly Sales Report</span>
+            </div>
+            <div class="periodic-report-generator">
+                <span class="section-header">Quarter Sales Report</span>
+            </div>
+            <div class="periodic-report-generator">
+                <span class="section-header">Semester Sales Report</span>
+            </div>
+            <div class="periodic-report-generator">
+                <span class="section-header">Yearly Sales Report</span>
+            </div>
+        </div>
+        <div class="bottom-section card">
+            <p>General Sales Report</p>
+        </div>
+    </div>
+    <div class="right-pane"></div>
+</div>
+<footer class="footer"></footer>
+<script>
+    const periodicReportGeneratorSections = document.querySelectorAll(".periodic-report-generator");
+    periodicReportGeneratorSections.forEach(element =>{
+        const imageHolder = document.createElement("div");
+        const img = document.createElement("img");
+        img.alt = "calendar";
+        img.src = "icons/calendar.svg";
+        img.style.width = "50px";
+        imageHolder.setAttribute("class","image-holder");
+        imageHolder.append(img);
+        element.append(imageHolder);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sales Diary</title>
+        <link rel="stylesheet" href="css/catalog-customer.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <header class="header">
+            <script src="script/header.js"></script>
+        </header>
+        <div class="content">
+            <nav class="left-pane">
+                <script src="script/nav.js"></script>
+            </nav>
+            <div class="main-section">
+                <div class="search-section">
+                    <div id="search-bar">
+                        <label for="search-term-input"></label>
+                        <input id="search-term-input" type="text" placeholder="Search for a customer"/>
+                        <img src="icons/search.png" alt="search"/>
+                    </div>
+                    <ul id="search-item-list"></ul>
+                </div>
+                <div class="customers-details-section">
+                    <div class="customer-detail">
+                        <img id="customer-image" src="icons/avatar.svg" alt="avatar"/>
+                        <span><b>Name:</b>Edward Benson</span>
+                        <span><b>Phone:</b>+2348076348832</span>
+                        <span><b>Company:</b>Benson Integrated Ltd.</span>
+                        <span><b>Address:</b>114 Kingstone Avenue</span><br>
+                        <div class="action-section">
+                            <button type="button" title="View more detail">
+                                <span>More</span>
+                                <img src="icons/more.png" alt="more"/>
+                            </button>
+                            <div class="fab-with-icon" title="Delete product detail" style="background:#f00;">
+                                <img src="icons/delete.png" alt="delete"/>
+                            </div>
+                            <div class="fab-with-icon" title="Edit product detail" style="background: seagreen;">
+                                <img src="icons/edit.png" alt="edit icon"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-btn fab-with-icon" title="Add product detail" style="background:purple;">
+                        <span style="color:#fff;">+</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="right-pane"></nav>
+        </div>
+        <footer class="footer">
+            <script src="script/footer.js"></script>
+        </footer>
+        <script src="script/search.js"></script>
+        <script>
+            const customers = 11;        
+            const customersDetailsSection = document.querySelector(".customers-details-section");
+            for (let i = 0; i < customers;i++){
+                const customerDetail = document.createElement("div");
+                customerDetail.setAttribute("class","customer-detail");
+                customerDetail.innerHTML = `
+                <img id="customer-image" src="icons/avatar.svg" alt="avatar"/>
+                        <span><b>Name:</b>Edward Benson</span>
+                        <span><b>Phone:</b>+2348076348832</span>
+                        <span><b>Company:</b>Benson Integrated Ltd.</span>
+                        <span><b>Address:</b>114 Kingstone Avenue</span><br>
+                        <div class="action-section">
+                            <button type="button" title="View more detail">
+                                <span>More</span>
+                                <img src="icons/more.png" alt="more"/>
+                            </button>
+                            <div class="fab-with-icon" title="Delete product detail" style="background:#f00;">
+                                <img src="icons/delete.png"/>
+                            </div>
+                            <div class="fab-with-icon" title="Edit product detail" style="background: seagreen;">
+                                <img src="icons/edit.png"/>
+                            </div>
+                        </div>`;
+
+                        customersDetailsSection.append(customerDetail);
+            }
+
+            const data = ["Jerry Mackson","Benson ","Glen Mcquine",
+                "Hellen Brown", "Skirt John", "Rodgers Brick","Deklan Jones", "Edward Benson"];
+            inflateUnorderedList(data);
+
+        </script>
+    </body>
+</html>

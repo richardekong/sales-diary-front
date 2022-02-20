@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sales Diary</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/record-sales.css"/>
+</head>
+<body>
+    <header class="header">
+        <script src="script/header.js"></script>
+    </header>
+    <div class="content">
+        <nav class="left-pane">
+            <script src="script/nav.js"></script>
+        </nav>
+        <div class="main-section">
+            <div id="top-section">
+                <img src="icons/product.png" alt="product image"/>
+            </div>
+            <div id="mid-section">
+                <table id="product-detail">
+                    <tr>
+                        <td>Id:</td>
+                        <td>-----------------------------</td>
+                    </tr>
+                    <tr>
+                        <td>Product:</td>
+                        <td>-----------------------------</td>
+                    </tr>
+                    <tr>
+                        <td>Cost per unit:</td>
+                        <td>-----------------------------</td>
+                    </tr>
+                    <tr>
+                        <td>Stock:</td>
+                        <td>-----------------------------</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="low-section">
+                <form id="product-form">
+                    <label for="product">Select Product</label><br><br>
+                    <div class="datalist-box">
+                        <input id="product" type="text" name="product" list="products" placeholder="Select product"/>
+                        <datalist id="products"></datalist>
+                    </div>
+                    <br>
+                    <label for="qty-sold">Qty sold</label><br><br>
+                    <input id="qty-sold" type="number" placeholder="Enter quantity sold"/>
+                    <br>
+                    <br>
+                    <label for="price">Price per unit</label><br><br>
+                    <input id="price" type="number" placeholder="Enter price per Unit"/>
+                    <br>
+                    <br>
+                    <div id="caution" onclick="showCustomerForm()"
+                         style="cursor: pointer; display: flex; align-items: center;">
+                        <img src="icons/caution.png" alt="caution" width="20px" height="20px"/>
+                        <b style="margin-left:10px;">You must specify customer</b>
+                    </div>
+                    <br>
+                    <br>
+                    <button class="btn" type="button">
+                        <img src="icons/edit.png" alt="record">
+                        <span>Record</span>
+                    </button>
+                </form>
+                <form id="customer-forms">
+                    <button id="btn-back" type="button" onclick="goBackToProductForm()">
+                        <img src="icons/back.svg" alt="back"/>
+                        <span>Back</span>
+                    </button>
+                    <p>New customer?</p>
+                    <input id="yes" type="radio" onclick="showSelectedForm()" name="customerForm" value="yes"/>
+                    <label for="yes">Yes</label>
+                    <input id="no" type="radio" onclick="showSelectedForm()" name="customerForm" value="no"/>
+                    <label for="no">No</label>
+                    <br>
+                    <br>
+                    <div id="new-customer-form-section">
+                        <form id="new-customer-form">
+                            <label for="cname">Enter customer name</label><br><br>
+                            <input id="cname" type="text" placeholder="Enter customer's name"/>
+                            <br>
+                            <br>
+                            <label for="c-email">Enter customer Email</label><br><br>
+                            <input id="c-email" type="text" placeholder="Enter customer's email"/>
+                            <br>
+                            <br>
+                            <label for="company">Enter customer company</label><br><br>
+                            <input id="company" type="text" placeholder="Enter customer's company"/>
+                            <br>
+                            <br>
+                            <label for="c-address">Enter customer Address</label><br><br>
+                            <input id="c-address" type="text" placeholder="Enter customer's address"/>
+                            <br>
+                            <br>
+                            <label for="sign">Signature</label><br><br>
+                            <canvas id="sign" class="signature-canvass"></canvas>
+                            <br>
+                            <br>
+                            <button class="btn" type="button">
+                                <img src="icons/done.svg" alt="done"/>
+                                <span>Done</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div id="old-customer-form-section">
+                        <form id="old-customer-form">
+                            <label for="customer">Pick a customer</label><br><br>
+                            <div class="datalist-box">
+                                <input id="customer" type="text" list="customers" name="customer"
+                                       placeholder="Select customer"/>
+                                <datalist id="customers"></datalist>
+                            </div>
+                            <br>
+                            <label for="record-type">What are you recording?</label><br><br>
+                            <select id="record-type">
+                                <option>Select one</option>
+                                <option value="Sale">Sale</option>
+                                <option value="Credit">Credit</option>
+                            </select>
+                            <br>
+			    <br>
+                            <label for="sign1">Signature</label><br><br>
+                            <canvas id="sign1" class="signature-canvass"></canvas>
+                            <br>
+                            <br>
+                            <button class="btn" type="button">
+                                <img src="icons/done.svg" alt="done"/>
+                                <span>Done</span>
+                            </button>
+                        </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-pane"></div>
+    </div>
+    <footer class="footer">
+        <script src="script/footer.js"></script>
+    </footer>
+    <script src="script/header.js"></script>
+    <script>
+    const goBackToProductForm = () => {
+        document.querySelector("#customer-forms").style = "display:none;";
+        document.querySelector("#old-customer-form-section").style = "display:none;";
+        document.querySelector("#product-form").style = "display:block;"
+    };
+
+    const showCustomerForm = () => {
+        document.querySelector("#product-form").style = "display:none;";
+        document.querySelector("#customer-forms").style = "display:block;";
+        showSelectedForm();
+    };
+
+    const showSelectedForm = () => {
+        const oldFormSection = document.getElementById("old-customer-form-section");
+        const newFormSection = document.getElementById("new-customer-form-section");
+        if (document.getElementById("no").checked === true) {
+            oldFormSection.style.display = "block";
+            newFormSection.style.display = "none";
+        } else {
+            newFormSection.style.display = "block";
+            oldFormSection.style.display = "none";
+        }
+    };
+
+    const products = [
+        {id: "8238234", product: "Dell XPS 13", cost: "450.00", stock: 30.0},
+        {id: "8232356", product: "Hp Pro Book", cost: "500.00", stock: 35.0},
+        {id: "8237834", product: "Hp Revolve", cost: "600.00", stock: 60.0},
+        {id: "8238123", product: "Mac Book Air", cost: "750.00", stock: 40.0},
+        {id: "8934923", product: "Lenovo Noga", cost: "450.00", stock: 10.0},
+        {id: "8231163", product: "Hp Laser jet P2050", cost: "150.00", stock: 50.0}
+    ];
+
+    const productDatalist = document.querySelector("#products");
+
+    const productDataListOptions = products.map(name => name.product)
+        .map(name => {
+            let option = document.createElement("option")
+            option.value = name;
+            return option;
+        });
+
+    productDatalist.append(...productDataListOptions);
+
+    const customers = [
+        {customer: "Benson", email: "ben@mail.com", company: "Satoshi Lab", address: "Clay mount 34"},
+        {customer: "Henry Matt", email: "hen@mail.com", company: "Satoshi Lab", address: "Clay mount 50"},
+        {customer: "Coby Smith", email: "smith@mail.com", company: "Satoshi Lab", address: "Clay mount 12"},
+        {customer: "Franklin Paul", email: "frank@mail.com", company: "Satoshi Lab", address: "Clay mount 90"},
+        {customer: "Jane Boron", email: "jane@mail.com", company: "Satoshi Lab", address: "Clay mount 23"}
+    ];
+
+    const customerDatalist = document.querySelector("#customers");
+
+    const customerDatalistOptions = customers.map(customer => customer.customer)
+        .map(name => {
+            let option = document.createElement("option");
+            option.value = name;
+            return option;
+        });
+    customerDatalist.append(...customerDatalistOptions);
+</script>
+</body>
+</html>
+

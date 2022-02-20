@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sales Diary</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/inventory.css"/>
+    </head>
+    <body>
+        <header class="header">
+            <script src="script/header.js"></script>
+        </header>
+        <div class="content">
+            <nav class="left-pane">
+                <script src="script/nav.js"></script>
+            </nav>
+            <div class="main-section">
+                <div class="product-image-holder card">
+                    <img src="icons/product.png" alt="product"/>
+                </div>
+                <div class="image-upload-section card">
+                    <button class="image-button" type="button">
+                      <img src="icons/camera.png" alt="camera"/>
+                      <span>Snap</span>
+                    </button>
+                    <button class="image-button" type="button">
+                        <img src="icons/upload.png" alt="upload"/>
+                        <span>Upload</span>
+                    </button>
+                </div>
+                <div class="inv-form-holder card">
+                    <form class="inv-form">
+                        <p>Enter prouduct name</p>
+                        <input type="text" placeholder="Product Name"/>
+                        <p>Enter product code</p>
+                        <input type="text" placeholder="Product code"/>
+                        <p>Enter quantity</p>
+                        <input type="number" placeholder="Quantity"/>
+                        <p>Enter cost per unit</p>
+                        <input type="number" placeholder="Cost per unit"/>
+                        <p>Enter Description</p>
+                        <textarea cols="100" rows="10"></textarea>
+                        <br>
+                        <button class="image-button" type="button">
+                            <img src="icons/cart.png" alt="cart"/>
+                            <span>Stock up</span>
+                        </button>
+                    </form>
+                    <p>Stock up your Catalog</p>
+                </div>
+            </div>
+            <div class="right-pane"></div>
+        </div>
+        <footer class="footer">
+            <script src="script/footer.js"></script>
+        </footer>
+    </body>
+</html>
