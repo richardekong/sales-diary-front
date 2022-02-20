@@ -1,0 +1,86 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <title>Sales Diary</title>
+    <link rel="stylesheet" href="css/catalog-customer.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="header">
+    <script src="script/header.js"></script>
+</header>
+<div class="content">
+    <nav class="left-pane">
+        <script src="script/nav.js"></script>
+    </nav>
+    <div class="main-section">
+        <div class="search-section">
+            <div id="search-bar" class="datalist-box">
+                <label for="search-term-input"></label>
+                <input id ="search-term-input" type="text" placeholder="Search for a product"/>
+                <img id="search-btn" src="icons/search.png" alt="search"/>
+            </div>
+            <ul id="search-item-list"></ul> 
+        </div>
+        <div class="catalog-section">
+            <div class="product-detail">
+                <img id="product-image" src="icons/product.png" alt="product"/>
+                <span>Product:Samsung LCD</span>
+                <span>Cost:$300</span>
+                <span>Stock:50</span><br>
+                <div class="action-section">
+                    <button type="button" title="View more detail">
+                        <span>More</span>
+                        <img src="icons/more.png" alt="more"/>
+                    </button>
+                    <div class="fab-with-icon" title="Delete product detail" style="background:#f00;">
+                        <img src="icons/delete.png" alt="delete"/>
+                    </div>
+                    <div class="fab-with-icon" title="Edit product detail" style="background: seagreen;">
+                        <img src="icons/edit.png" alt="edit">
+                    </div>
+                </div>
+            </div>
+            <div class="add-btn fab-with-icon" title="Add product detail" style="background:purple;">
+                <span style="color:#fff;">+</span>
+            </div>
+        </div>
+    </div>
+    <div class="right-pane"></div>
+</div>
+<footer class="footer">
+    <script src="script/footer.js"></script>
+</footer>
+<script src="script/search.js"></script>
+<script>
+    const products = 11;
+    const catalogSection = document.querySelector(".catalog-section");
+    for (let i = 0; i < products; i++) {
+        const productDetail = document.createElement("div");
+        productDetail.innerHTML = `
+                <img id="product-image" src="icons/product.png" alt="product"/>
+                        <span>Product:Samsung LCD</span>
+                        <span>Cost:$300</span>
+                        <span>Stock:50</span><br>
+                        <div class="action-section">
+                            <button type="button" title="View more detail">
+                                <span>More</span>
+                                <img src="icons/more.png" alt="more"/>
+                            </button>
+                            <div class="fab-with-icon" title="Delete product detail" style="background:#f00;">
+                                <img src="icons/delete.png" alt="delete"/>
+                            </div>
+                            <div class="fab-with-icon" title="Edit product detail" style="background: seagreen;">
+                                <img src="icons/edit.png" alt="edit">
+                            </div>
+                        </div>`;
+        productDetail.setAttribute("class", "product-detail");
+        catalogSection.append(productDetail)
+    }
+    
+    const data = ["Lenovo","Hp Pro Book", "Dell XPS", "Microsoft surface","WIFI Router","External DVD Drive","Kyocera Printer"];
+    inflateUnorderedList(data);
+    
+</script>
+</body>
+</html>
